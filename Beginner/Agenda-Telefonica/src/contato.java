@@ -1,38 +1,32 @@
-import java.sql.Date;
+import java.time.LocalDate;
 
-public class contato {
-  private String nome;
-  private int telefone;
-  private String email;
-  private String endereco;
-  private Date dataNascimento;
+public class Contato {
+  private final String nome;
+  private final String email;
+  private final long telefone;
+  private final LocalDate dataNascimento;
 
-  public contato(String nome, int telefone, String email, String endereco, Date dataNascimento) {
+  public Contato(String nome, String email, long telefone, LocalDate dataNascimento) {
     this.nome = nome;
-    this.telefone = telefone;
     this.email = email;
-    this.endereco = endereco;
+    this.telefone = telefone;
     this.dataNascimento = dataNascimento;
   }
-  
+
+  // Métodos de acesso (getters)
   public String getNome() {
     return nome;
-  }
-
-  public int getTelefone() {
-    return telefone;
   }
 
   public String getEmail() {
     return email;
   }
 
-  public String getEndereco() {
-    return endereco;
+  public long getTelefone() {
+    return telefone;
   }
 
-  public Date getDataNascimento() {
+  public LocalDate getDataNascimento() {
     return dataNascimento;
   }
-
 }
