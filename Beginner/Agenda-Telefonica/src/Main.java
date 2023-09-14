@@ -46,7 +46,7 @@ public class Main {
                     String nomeRemover = scanner.nextLine();
                     boolean removido = agenda.removerContato(nomeRemover);
                     if (removido) {
-                        System.out.println("Contato removido com sucesso!");
+                        printGreen("Contato removido com sucesso!");
                     } else {
                         printRed("Contato não encontrado. " + emojiTriste);
                     }
@@ -56,7 +56,7 @@ public class Main {
                     String nomeBuscar = scanner.nextLine();
                     Contato contatoPorNome = agenda.buscarContatoPorNome(nomeBuscar);
                     if (contatoPorNome != null) {
-                        System.out.println("Contato encontrado:\nNome: " + contatoPorNome.getNome() +
+                        printGreen("Contato encontrado:\nNome: " + contatoPorNome.getNome() +
                                 "\nEmail: " + contatoPorNome.getEmail() +
                                 "\nTelefone: " + contatoPorNome.getTelefone() +
                                 "\nData de Nascimento: " + contatoPorNome.getDataNascimento());
@@ -69,7 +69,7 @@ public class Main {
                     String emailBuscar = scanner.nextLine();
                     Contato contatoPorEmail = agenda.buscarContatoPorEmail(emailBuscar);
                     if (contatoPorEmail != null) {
-                        System.out.println("Contato encontrado:\nNome: " + contatoPorEmail.getNome() +
+                        printGreen("Contato encontrado:\nNome: " + contatoPorEmail.getNome() +
                                 "\nEmail: " + contatoPorEmail.getEmail() +
                                 "\nTelefone: " + contatoPorEmail.getTelefone() +
                                 "\nData de Nascimento: " + contatoPorEmail.getDataNascimento());
@@ -82,7 +82,7 @@ public class Main {
                     int telefoneBuscar = scanner.nextInt();
                     Contato contatoPorTelefone = agenda.buscarContatoPorTelefone(telefoneBuscar);
                     if (contatoPorTelefone != null) {
-                        System.out.println("Contato encontrado:\nNome: " + contatoPorTelefone.getNome() +
+                        printGreen("Contato encontrado:\nNome: " + contatoPorTelefone.getNome() +
                                 "\nEmail: " + contatoPorTelefone.getEmail() +
                                 "\nTelefone: " + contatoPorTelefone.getTelefone() +
                                 "\nData de Nascimento: " + contatoPorTelefone.getDataNascimento().toString());
@@ -103,11 +103,11 @@ public class Main {
     }
 
     public static void printRed(String message) {
-        System.out.print("\u001B[31m" + message + "\u001B[0m");
+        System.out.println("\u001B[31m" + message + "\u001B[0m");
     }
 
     public static void printGreen(String message) {
-        System.out.print("\u001B[32m" + message + "\u001B[0m");
+        System.out.println("\u001B[32m" + message + "\u001B[0m");
     }
 
     public static void printWhite(String message) {
@@ -115,7 +115,7 @@ public class Main {
     }
 
     public static void printGrey(String message) {
-        System.out.print("\u001B[90m" + message + "\u001B[0m");
+        System.out.println("\u001B[90m" + message + "\u001B[0m");
     }
 
 }
