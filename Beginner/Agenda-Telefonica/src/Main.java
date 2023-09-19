@@ -12,17 +12,17 @@ public class Main {
 
         int escolha;
         do {
-            printWhite("\n               menu:               ");
-            printWhite("___________________________________");
-            printWhite("\n1. Adicionar contato");
-            printWhite("2. Remover contato");
-            printWhite("3. Buscar contato por nome");
-            printWhite("4. Buscar contato por email");
-            printWhite("5. Buscar contato por telefone");
-            printWhite("6. Consultar tamanho da Agenda");
-            printWhite("7. Finalizar");
-            printWhite("___________________________________");
-            printWhite("       Escolha uma opção:          ");
+            printGrey("\n               menu:               ");
+            printGrey("___________________________________");
+            printGrey("\n1. Adicionar contato");
+            printGrey("2. Remover contato");
+            printGrey("3. Buscar contato por nome");
+            printGrey("4. Buscar contato por email");
+            printGrey("5. Buscar contato por telefone");
+            printGrey("6. Consultar tamanho da Agenda");
+            printGrey("7. Finalizar");
+            printGrey("___________________________________");
+            printGrey("       Escolha uma opção:          ");
             escolha = scanner.nextInt();
             scanner.nextLine();
 
